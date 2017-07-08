@@ -314,7 +314,9 @@
         return 0;
       }
       var ratio = (value - this.props.min) / range;
-      return ratio * this.state.upperBound;
+      var preAdjusted = ratio * this.state.upperBound;
+
+      return preAdjusted - (this.state.handleSize / 2 || 0);
     },
 
     // calculates the value corresponding to a given pixel offset, i.e. the inverse of `_calcOffset`.
@@ -330,9 +332,7 @@
         zIndex: this.state.zIndices.indexOf(i) + 1
       };
 
-      const handleRadius = (this.state.handleSize / 2) || 0;
-
-      style[this._posMinKey()] = (offset - handleRadius) + 'px';
+      style[this._posMinKey()] = offset + 'px';
       return style;
     },
 
