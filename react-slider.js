@@ -329,6 +329,8 @@
         willChange: this.state.index >= 0 ? this._posMinKey() : '',
         zIndex: this.state.zIndices.indexOf(i) + 1
       };
+
+
       style[this._posMinKey()] = offset + 'px';
       return style;
     },
@@ -666,6 +668,9 @@
       var className = this.props.handleClassName + ' ' +
         (this.props.handleClassName + '-' + i) + ' ' +
         (this.state.index === i ? this.props.handleActiveClassName : '');
+
+      /* This is not the best place for this, but it might work */
+      console.log("This is my style: ", style);
 
       return (
         React.createElement('div', {

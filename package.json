@@ -1,6 +1,6 @@
 {
   "name": "react-slider",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Slider component for React",
   "main": "react-slider.js",
   "keywords": [
@@ -18,6 +18,10 @@
     {
       "name": "James Brauman",
       "email": "james.22au@gmail.com"
+    },
+    {
+      "name": "Ken Reese",
+      "email": "krrgithub@gmail.com"
     }
   ],
   "license": "MIT",
