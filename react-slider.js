@@ -331,7 +331,6 @@
       };
 
       const handleRadius = (this.state.handleSize / 2) || 0;
-      console.log("Handle radius: ", handleRadius);
 
       style[this._posMinKey()] = (offset - handleRadius) + 'px';
       return style;
