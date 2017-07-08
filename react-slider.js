@@ -316,7 +316,7 @@
       var ratio = (value - this.props.min) / range;
       var preAdjusted = ratio * this.state.upperBound;
 
-      return preAdjusted - (this.state.handleSize / 2 || 0);
+      return preAdjusted - 1 /* -1 to prevent circular handles from looking really bad */;
     },
 
     // calculates the value corresponding to a given pixel offset, i.e. the inverse of `_calcOffset`.
