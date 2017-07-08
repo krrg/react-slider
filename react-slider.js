@@ -330,8 +330,10 @@
         zIndex: this.state.zIndices.indexOf(i) + 1
       };
 
+      const handleRadius = (this.state.handleSize / 2) || 0;
+      console.log("Handle radius: ", handleRadius);
 
-      style[this._posMinKey()] = offset + 'px';
+      style[this._posMinKey()] = (offset - handleRadius) + 'px';
       return style;
     },
 
@@ -450,7 +452,7 @@
     _removeHandlers: function (eventMap) {
       for (var key in eventMap) {
         document.removeEventListener(key, eventMap[key], false);
-      }
+      }const handleRadius = (this.state.handleSize / 2) || 0;
     },
 
     _start: function (i, position) {
@@ -670,7 +672,8 @@
         (this.state.index === i ? this.props.handleActiveClassName : '');
 
       /* This is not the best place for this, but it might work */
-      console.log("This is my style: ", style);
+
+
 
       return (
         React.createElement('div', {
